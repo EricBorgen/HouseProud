@@ -36,6 +36,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 gem 'simple_form'
 gem 'devise'
+gem 'administrate'
 
 group :test do
   gem 'factory_girl_rails'
