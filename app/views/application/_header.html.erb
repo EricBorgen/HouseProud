@@ -3,8 +3,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Houseproud</title>
+  <title>Houseproud<%= yield :title %></title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
