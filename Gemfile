@@ -33,7 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'twitter-bootstrap-rails'
+gem 'jquery-turbolinks'
 gem 'simple_form'
+gem 'devise'
 
 group :test do
   gem 'factory_girl_rails'

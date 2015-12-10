@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Houseproud</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<%= render 'header' %>
+<%= render 'navigation' %>
+<%= render 'flashes' %>
+<%= yield :top_content %>
+<div class="container">
+  <h1><%= yield :header %></h1>
 
-<%= yield %>
-
+  <%= yield %>
+</div>
+<%= render 'footer' %>
+<%= render 'javascript' %>
 </body>
 </html>
