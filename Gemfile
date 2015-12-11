@@ -37,6 +37,7 @@ gem 'jquery-turbolinks'
 gem 'simple_form'
 gem 'devise'
 gem 'administrate'
+gem 'cancancan'
 
 group :test do
   gem 'factory_girl_rails'

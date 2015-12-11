@@ -10,6 +10,7 @@ class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     email: Field::String,
+    roles_mask: Field::Number,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -33,7 +34,7 @@ class UserDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :email,
-    :reset_password_token,
+    :roles_mask
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -46,6 +47,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :email,
+    :roles_mask,
     :encrypted_password,
     :reset_password_token,
     :reset_password_sent_at,
