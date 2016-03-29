@@ -38,6 +38,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'administrate'
 gem 'cancancan'
+gem 'turnout'   #for Maintenance mode
 
 group :test do
   gem 'factory_girl_rails'
