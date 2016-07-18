@@ -1,5 +1,8 @@
 Notes for Builder Model
 
+rails generate scaffold builder name:string email:string:uniq
+
+
 Builder
   id
   name
@@ -26,10 +29,10 @@ Physical_address_table
   lattitude
   longitude
     
-Spec_House
+Prototype_House
   id
   name
   
   
-Contact_table
+Identity_table
 
