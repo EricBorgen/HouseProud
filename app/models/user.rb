@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
+  has_many :addresses
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+
   ROLES = %i[admin builder user guest]
 
    def roles=(roles)
