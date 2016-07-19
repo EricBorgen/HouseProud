@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719001606) do
+ActiveRecord::Schema.define(version: 20160719034139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,10 @@ ActiveRecord::Schema.define(version: 20160719001606) do
     t.string   "street_address_3"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "builder_id"
   end
+
+  add_index "addresses", ["builder_id"], name: "index_addresses_on_builder_id", using: :btree
 
   create_table "builders", force: :cascade do |t|
     t.string   "name"
@@ -65,4 +68,5 @@ ActiveRecord::Schema.define(version: 20160719001606) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "addresses", "builders"
 end

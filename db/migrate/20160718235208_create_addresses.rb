@@ -13,7 +13,6 @@ class CreateAddresses < ActiveRecord::Migration
       t.string :street_address
       t.string :street_address_2
       t.string :street_address_3
-
       t.timestamps null: false
     end
   end

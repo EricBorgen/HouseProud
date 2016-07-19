@@ -9,7 +9,7 @@ Builder
   logo_image
   -> physical_address_table
   contact_phone
-  
+
 
 Neighborhood
   id
@@ -17,22 +17,8 @@ Neighborhood
   logo_image
   -> physical_address_table
   contact_phone
-  
-Physical_address_table
-  address1
-  address2
-  city
-  state
-  postcode (letters and numbers if intl)
-  county
-  country
-  lattitude
-  longitude
+
     
 Prototype_House
   id
   name
-  
-  
-Identity_table
-

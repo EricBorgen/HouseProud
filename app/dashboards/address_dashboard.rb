@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class BuilderDashboard < Administrate::BaseDashboard
+class AddressDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,21 +9,20 @@ class BuilderDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    # email: Field::String,
-    # roles_mask: Field::Number,
-    # encrypted_password: Field::String,
-    # reset_password_token: Field::String,
-    # reset_password_sent_at: Field::DateTime,
-    # remember_created_at: Field::DateTime,
-    # sign_in_count: Field::Number,
-    # current_sign_in_at: Field::DateTime,
-    # last_sign_in_at: Field::DateTime,
-    # current_sign_in_ip: Field::String.with_options(searchable: false),
-    # last_sign_in_ip: Field::String.with_options(searchable: false),
+    country_ISO_code: Field::String,
+    name_line: Field::String,
+    first_name: Field::String,
+    last_name: Field::String,
+    org_name: Field::String,
+    state_province_region: Field::String,
+    county_district: Field::String,
+    city_town: Field::String,
+    postal_code: Field::String,
+    street_address: Field::String,
+    street_address_2: Field::String,
+    street_address_3: Field::String,
     # created_at: Field::DateTime,
     # updated_at: Field::DateTime,
-    addresses: Field::HasMany,
-    name: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -33,10 +32,18 @@ class BuilderDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :name,
-    :addresses,
-    # :email,
-    # :roles_mask
+    :country_ISO_code,
+    :name_line,
+    :first_name,
+    :last_name,
+    :org_name,
+    :state_province_region,
+    :county_district,
+    :city_town,
+    :postal_code,
+    :street_address,
+    :street_address_2,
+    :street_address_3,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -47,20 +54,18 @@ class BuilderDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :addresses,
-    # :email,
-    # :roles_mask,
-    # :encrypted_password,
-    # :reset_password_token,
-    # :reset_password_sent_at,
-    # :remember_created_at,
-    # :sign_in_count,
-    # :current_sign_in_at,
-    # :last_sign_in_at,
-    # :current_sign_in_ip,
-    # :last_sign_in_ip,
-
+    :country_ISO_code,
+    :name_line,
+    :first_name,
+    :last_name,
+    :org_name,
+    :state_province_region,
+    :county_district,
+    :city_town,
+    :postal_code,
+    :street_address,
+    :street_address_2,
+    :street_address_3,
   ]
 
   # Overwrite this method to customize how users are displayed
