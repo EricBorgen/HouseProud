@@ -8,8 +8,10 @@ class AddressDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    country_ISO_code: Field::String,
+    # id: Field::Number,
+    country_ISO_code: Field::String.with_options(
+      title: "Country Code"
+    ),
     name_line: Field::String,
     first_name: Field::String,
     last_name: Field::String,
@@ -31,19 +33,19 @@ class AddressDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :country_ISO_code,
+    # :id,
+    # :country_ISO_code,
     :name_line,
-    :first_name,
-    :last_name,
+    # :first_name,
+    # :last_name,
     :org_name,
-    :state_province_region,
-    :county_district,
+    # :county_district,
     :city_town,
+    :state_province_region,
     :postal_code,
-    :street_address,
-    :street_address_2,
-    :street_address_3,
+    # :street_address,
+    # :street_address_2,
+    # :street_address_3,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
